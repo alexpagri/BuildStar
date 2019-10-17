@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BitmapProcessor.cs" />
     <Compile Include="BlockModel.cs" />
+    <Compile Include="Interface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

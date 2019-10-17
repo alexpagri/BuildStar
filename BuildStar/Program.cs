@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 
 namespace BuildStar
 {
@@ -27,6 +28,11 @@ namespace BuildStar
                 }
             }
         }
+    }
+
+    class BlockPool
+    {
+        BitmapStatistics[] blocks;
     }
 
     class Comms
@@ -139,7 +145,7 @@ namespace BuildStar
 
         public string execute(string command)
         {
-            if(auth == false)
+            if (auth == false)
             {
                 throw new Exception("call login() first / login failed previously (returned false)!");
             }

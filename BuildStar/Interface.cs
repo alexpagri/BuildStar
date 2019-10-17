@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace BuildStar
 {
+    interface IBitmapStatistics
+    {
+        int getVariance();
+        int getStdDeviation();
+        Color getMean();
+    }
     interface IBitmapConverter
     {
         Color[][] getAsMatrix();
