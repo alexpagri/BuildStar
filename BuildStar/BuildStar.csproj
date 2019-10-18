@@ -45,14 +45,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BitmapProcessor.cs" />
-    <Compile Include="BlockModel.cs" />
+    <Compile Include="BlockBatchProcessing\BlockBatchProcessor.cs" />
+    <Compile Include="Minecraft\CommandBuilder.cs" />
+    <Compile Include="BlockMatchers\DebugMatcher.cs" />
+    <Compile Include="ImageBoostConverter\BitmapConverter.cs" />
+    <Compile Include="BlockMatchers\EuclideanMatcher.cs" />
+    <Compile Include="Main\BlockPainter.cs" />
+    <Compile Include="Networking\Comms.cs" />
+    <Compile Include="HelperClass\PointMath3D.cs" />
+    <Compile Include="BlockLoading\BitmapProcessor.cs" />
+    <Compile Include="BlockStorage\Block.cs" />
     <Compile Include="Interface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics\BitmapStatistics.cs" />
+    <Compile Include="Networking\RCON.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace BuildStar
 {
-    class BitmapProcessor
+    static class BitmapProcessor
     {
 
-        public static List<BlockModel> LoadImages(string path)
+        public static List<IBlock> LoadImages(string path)
         {
-            List<BlockModel> result = new List<BlockModel>();
+            List<IBlock> result = new List<IBlock>();
             DirectoryInfo d = new DirectoryInfo(path);
             FileInfo[] Files = d.GetFiles("*.*");
             foreach (var file in Files)
             {
                 try
                 {
-                    BlockModel auxBlock = new BlockModel();
+                    Block auxBlock = new Block();
                     auxBlock.Name = Path.GetFileNameWithoutExtension(file.FullName);
                     auxBlock.Image = (Bitmap)Image.FromFile(file.FullName);
                     result.Add(auxBlock);
